@@ -13,6 +13,7 @@ import { Checkout } from './pages/Checkout';
 import { Success } from './pages/Success';
 import { AdminLogin } from './pages/admin/AdminLogin';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
+import { ScrollToTop } from './components/ScrollToTop';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const { isAuthenticated } = useAuth();
@@ -37,6 +38,7 @@ function App() {
             <LanguageProvider>
                 <ShopProvider>
                     <Router>
+                        <ScrollToTop />
                         <Routes>
                             {/* Public Routes */}
                             <Route path="/" element={<Layout><Home /></Layout>} />
