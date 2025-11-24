@@ -76,7 +76,7 @@ export const translations = {
         emailUs: 'راسلنا'
     },
     en: {
-        logoText: 'ABU FARGANCE ',
+        logoText: 'ABU FRAGRANCE ',
         heroTitle: 'Discover Your Signature Scent',
         heroSubtitle: 'A premium collection of world-class fragrances',
         shopNow: 'Shop Now',
