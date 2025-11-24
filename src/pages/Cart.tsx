@@ -2,25 +2,27 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useShop } from '../context/ShopContext';
 import { Trash2, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export const Cart: React.FC = () => {
     const { cart, removeFromCart, updateQuantity } = useShop();
     const navigate = useNavigate();
+    const { t } = useLanguage();
 
     const total = cart.reduce((sum, item) => sum + (item.finalPrice * item.quantity), 0);
 
     if (cart.length === 0) {
         return (
             <div className="max-w-7xl mx-auto px-4 py-20 text-center">
-                <h2 className="text-2xl font-bold mb-4">Your cart is empty</h2>
-                <Link to="/products" className="text-primary hover:underline">Continue Shopping</Link>
+                <h2 className="text-2xl font-bold mb-4">{t('emptyCart')}</h2>
+                <Link to="/products" className="text-primary hover:underline">{t('products')}</Link>
             </div>
         );
     }
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
+            <h1 className="text-3xl font-bold mb-8">{t('cart')}</h1>
 
             <div className="grid md:grid-cols-3 gap-12">
                 <div className="md:col-span-2 space-y-6">
@@ -33,7 +35,7 @@ export const Cart: React.FC = () => {
                             <div className="flex-1 flex flex-col justify-between">
                                 <div>
                                     <h3 className="font-bold">{item.name}</h3>
-                                    {item.selectedSize && <p className="text-sm text-gray-500">Size: {item.selectedSize}</p>}
+                                    {item.selectedSize && <p className="text-sm text-gray-500">{t('size')}: {item.selectedSize}</p>}
                                     <div className="flex items-center space-x-2 mt-2">
                                         <button
                                             onClick={() => updateQuantity(item.id, item.selectedSize, item.quantity - 1)}
@@ -66,18 +68,18 @@ export const Cart: React.FC = () => {
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-xl h-fit">
-                    <h3 className="text-xl font-bold mb-4">Order Summary</h3>
+                    <h3 className="text-xl font-bold mb-4">{t('orderSummary')}</h3>
                     <div className="flex justify-between mb-4">
-                        <span>Subtotal</span>
+                        <span>{t('subtotal')}</span>
                         <span className="font-bold">{total} DZD</span>
                     </div>
-                    <p className="text-sm text-gray-500 mb-6">Shipping calculated at checkout</p>
+                    <p className="text-sm text-gray-500 mb-6">{t('shippingDetails')} calculated at checkout</p>
 
                     <button
                         onClick={() => navigate('/checkout')}
                         className="w-full btn-primary flex justify-center items-center"
                     >
-                        Proceed to Checkout <ArrowRight className="ml-2 w-4 h-4" />
+                        {t('checkout')} <ArrowRight className="ml-2 w-4 h-4 rtl:mr-2 rtl:ml-0" />
                     </button>
                 </div>
             </div>

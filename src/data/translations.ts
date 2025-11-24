@@ -2,7 +2,7 @@ export type Language = 'ar' | 'en' | 'fr';
 
 export const translations = {
     ar: {
-        logoText: 'متجر العطور',
+        logoText: 'أبو العطور',
         heroTitle: 'اكتشف عطرك المميز',
         heroSubtitle: 'مجموعة فاخرة من العطور العالمية',
         shopNow: 'تسوق الآن',
@@ -12,7 +12,7 @@ export const translations = {
         products: 'المنتجات',
         cart: 'السلة',
         contact: 'اتصل بنا',
-        checkout: 'الدفع',
+        checkout: 'إحجز طلبك',
         addToCart: 'أضف إلى السلة',
         buyNow: 'اشتري الآن',
         size: 'المقاس',
@@ -27,7 +27,7 @@ export const translations = {
         dashboard: 'لوحة التحكم',
         orders: 'الطلبات',
         logout: 'خروج',
-        goToHome: 'الذهاب للمتجر',
+        goToHome: 'الذهاب للرئيسية',
         addProduct: 'إضافة منتج',
         delete: 'حذف',
         confirmOrder: 'تأكيد الطلب',
@@ -48,7 +48,7 @@ export const translations = {
         backToHome: 'العودة للرئيسية',
 
         newArrivals: 'وصل حديثاً',
-        viewDetails: 'التفاصيل',
+        viewDetails: 'إختر',
         quantity: 'الكمية',
         items: 'عناصر',
         customer: 'الزبون',
@@ -76,7 +76,7 @@ export const translations = {
         emailUs: 'راسلنا'
     },
     en: {
-        logoText: 'ABU_FRAGRANCE ',
+        logoText: 'ABU FARGANCE ',
         heroTitle: 'Discover Your Signature Scent',
         heroSubtitle: 'A premium collection of world-class fragrances',
         shopNow: 'Shop Now',
@@ -86,7 +86,7 @@ export const translations = {
         products: 'Products',
         cart: 'Cart',
         contact: 'Contact',
-        checkout: 'Checkout',
+        checkout: 'FILL YOUR ORDER',
         addToCart: 'Add to Cart',
         buyNow: 'Buy Now',
         size: 'Size',
@@ -122,7 +122,7 @@ export const translations = {
         backToHome: 'Back to Home',
 
         newArrivals: 'New Arrivals',
-        viewDetails: 'View Details',
+        viewDetails: 'CHOOSE',
         quantity: 'Quantity',
         items: 'Items',
         customer: 'Customer',
@@ -160,7 +160,7 @@ export const translations = {
         products: 'Produits',
         cart: 'Panier',
         contact: 'Contact',
-        checkout: 'Caisse',
+        checkout: 'REMPLIR VOTRE COMMANDE',
         addToCart: 'Ajouter au panier',
         buyNow: 'Acheter maintenant',
         size: 'Taille',
@@ -196,7 +196,7 @@ export const translations = {
         backToHome: 'Retour à l\'accueil',
 
         newArrivals: 'Nouveautés',
-        viewDetails: 'Voir détails',
+        viewDetails: 'CHOISIR',
         quantity: 'Quantité',
         items: 'Articles',
         customer: 'Client',
