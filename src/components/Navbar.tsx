@@ -15,7 +15,7 @@ export const Navbar: React.FC = () => {
         <nav className="bg-white shadow-md sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
-                    <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse">
+                    <Link to="/" className="flex items-center gap-2">
                         <video
                             src="https://cdn-icons-mp4.flaticon.com/512/19018/19018325.mp4"
                             autoPlay
@@ -29,13 +29,13 @@ export const Navbar: React.FC = () => {
                         </span>
                     </Link>
 
-                    <div className="hidden md:flex space-x-12 items-center rtl:space-x-reverse">
+                    <div className="hidden md:flex gap-12 items-center">
                         <Link to="/" className="text-gray-700 hover:text-primary transition">{t('home')}</Link>
                         <Link to="/products" className="text-gray-700 hover:text-primary transition">{t('products')}</Link>
                         <Link to="/contact" className="text-gray-700 hover:text-primary transition">{t('contact')}</Link>
                     </div>
 
-                    <div className="flex items-center space-x-4 rtl:space-x-reverse">
+                    <div className="flex items-center gap-4">
                         <LanguageSwitcher />
                         <Link to="/cart" className="relative text-gray-700 hover:text-primary transition">
                             <ShoppingCart className="w-6 h-6" />
