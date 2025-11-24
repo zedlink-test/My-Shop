@@ -1,0 +1,37 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Product } from '../types';
+import { ShoppingBag } from 'lucide-react';
+
+interface ProductCardProps {
+    product: Product;
+}
+
+export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+    return (
+        <div className="glass-card overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+            <div className="relative aspect-[4/5] overflow-hidden">
+                <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#24010e]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                <div className="absolute bottom-4 left-0 right-0 px-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <Link
+                        to={`/product/${product.id}`}
+                        className="w-full btn-primary py-2 text-sm flex items-center justify-center gap-2"
+                    >
+                        <ShoppingBag className="w-4 h-4" /> View Details
+                    </Link>
+                </div>
+            </div>
+
+            <div className="p-5 text-center">
+                <h3 className="font-bold text-lg text-[#24010e] mb-1">{product.name}</h3>
+                <p className="text-[#a16e02] font-medium">{product.price} DZD</p>
+            </div>
+        </div>
+    );
+};
