@@ -31,7 +31,7 @@ export const AdminLogin: React.FC = () => {
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                             className="input-field"
-                            placeholder="admin@eshop.dz"
+                            placeholder="admin@myshop.com"
                         />
                     </div>
                     <div>
