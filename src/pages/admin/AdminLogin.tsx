@@ -47,7 +47,7 @@ export const AdminLogin: React.FC = () => {
                     <button type="submit" className="w-full btn-primary">Login</button>
                 </form>
                 <div className="mt-4 text-center text-sm text-gray-500">
-                    Use: admin@eshop.dz / admin123
+                    Use: admin@myshop.com / admin123
                 </div>
             </div>
         </div>
